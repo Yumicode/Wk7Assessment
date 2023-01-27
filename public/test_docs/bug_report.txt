@@ -3,12 +3,23 @@ Created Jan 27, 2023
 
 1)Descriptions:
 
+- open the website by go to http://localhose:4000
+- click on "SEE ALL BOTS"button to see list of Bots
 
 2)Steps to reproduce:
 
+-click on "DRAW" button, then select any 2 Bots (one at time) by click on "Add to Duo" button
+-once 2 Bots are listed next to each other, click on "DUEL!" button
+-result of "You won" or "You lost!" will appear and the numbers of win and loss will increase accordingly
+-click "Play again" button for another duelno buttons showing
 
 3)Expected result:
 
 
 
 4)Actual result:
+
+
+
+
+5)Environment:
