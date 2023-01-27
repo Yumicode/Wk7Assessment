@@ -1,0 +1,12 @@
+Test case
+Created Jan 27, 2023
+
+1)Descriptions:
+
+
+2)Steps:
+
+-open the website by go to http://localhose:4000
+-click on "seeAllBots"button to start
+
+3)Postconditions:

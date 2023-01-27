@@ -1,0 +1,24 @@
+Test plan fo DuelDuo Game 
+on Jan 27, 2023
+
+1)Overview
+
+- Test Plan to debug this app
+
+2)Test criterias: 
+Players.....
+
+- able to see all robots listed and select any desired robot for battle
+- can play the game with a correct count of wins or losses
+- able to play again
+
+3)Entry criterias:
+Players.....
+- had access (devices and connection) to play this game
+- has npm, node, Github access, etc tools for devOp
+
+4)Exit criterias:
+- pass all the Test
+
+5)Details:
+
