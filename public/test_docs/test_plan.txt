@@ -1,7 +1,7 @@
 Test plan fo DuelDuo Game 
 on Jan 27, 2023
 
-1)Overview
+1)Overview:
 
 - Test Plan to debug this app
 
@@ -14,7 +14,7 @@ Players.....
 
 3)Entry criterias:
 Players.....
-- had access (devices and connection) to play this game
+- had access of devices and connection to play this game
 - has npm, node, Github access, etc tools for devOp
 
 4)Exit criterias:

@@ -5,9 +5,8 @@ Created Jan 27, 2023
 - User is able to see and click to select any 2 buttons for duel
 
 2)Steps:
-
 -open the website by go to http://localhose:4000
--click on "SEE ALL BOTS"button to see list of Bots
+-click on "SEE ALL BOTS" button to see list of Bots
 
 3)Postconditions:
 -click on "DRAW" button, then select any 2 Bots (one at time) by click on "Add to Duo" button

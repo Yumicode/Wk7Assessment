@@ -14,12 +14,11 @@ Created Jan 27, 2023
 -click "Play again" button for another duelno buttons showing
 
 3)Expected result:
-
-
+-no reactions when buttons were clicked
 
 4)Actual result:
-
-
-
+-error will be indicated on both browser and backend console
 
 5)Environment:
+-OS: Microsoft Windows 11 Home version 22H2
+-Browser: Version 109.0.5414.120 (Official Build) (64-bit)

@@ -1,11 +1,17 @@
 const express = require('express')
 const app = express()
+const cors = require("cors")
 const {bots, playerRecord} = require('./data')
 const {shuffleArray} = require('./utils')
 
 app.use(express.json())
+app.use(express.static(`public`))
 
-app.use(express.static('public'))
+app.get('/', (req, res) => {
+    res.sendFile(path.join(_dirname, './public/index.html'))
+})
+
+app.use(express.static(`{_dirname}/public`))
 
 app.get('/api/robots', (req, res) => {
     try {
