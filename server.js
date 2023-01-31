@@ -5,10 +5,23 @@ const app = express()
 const {bots, playerRecord} = require('./data')
 
 const {shuffleArray} = require('./utils')
+require('dotenv').config()
 
 app.use(express.json())
 
+// include and initialize the rollbar library with your access token
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: process.env.ROLLBAR_TOKEN
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
+
+// record a generic message and send it to Rollbar
+rollbar.log('Hello world!')
+
 app.get('/', (req, res) => {
+    rollbar.info('Hi Stranger!')
     res.sendFile(path.join(_dirname, './public/index.html'))
 })
 
@@ -26,6 +39,7 @@ app.get('/api/robots', (req, res) => {
     try {
         res.status(200).send(botsArr)
     } catch (error) {
+        rollbar.error('Not all bots could be fetched')
         console.log('ERROR! it is not working', error)
         res.sendStatus(400)
     }
@@ -38,6 +52,7 @@ app.get('/api/robots/five', (req, res) => {
         let compDuo = shuffled.slice(6, 8)
         res.status(200).send({choices, compDuo})
     } catch (error) {
+        rollbar.critical('Bot choices are not loading, something is not right here!')
         console.log('ERROR GETTING FIVE BOTS', error)
         res.sendStatus(400)
     }
@@ -69,6 +84,7 @@ app.post('/api/duel', (req, res) => {
             res.status(200).send('You won!')
         }
     } catch (error) {
+        rollbar.warning('Deul failed by broken app')
         console.log('ERROR DUELING', error)
         res.sendStatus(400)
     }
